@@ -33,7 +33,7 @@
 
 #include <windows.h>
 
-#ifdef GDK_WIN32_ENABLE_EGL
+#ifdef HAVE_EGL
 # include <epoxy/egl.h>
 #endif
 
@@ -339,7 +339,7 @@ struct _GdkWin32Surface
   } next_layout;
   gboolean force_recompute_size;
 
-#ifdef GDK_WIN32_ENABLE_EGL
+#ifdef HAVE_EGL
   EGLSurface egl_surface;
   EGLSurface egl_dummy_surface;
   guint egl_force_redraw_all : 1;
@@ -374,7 +374,7 @@ void gdk_win32_surface_move_resize (GdkSurface *window,
 RECT
 gdk_win32_surface_handle_queued_move_resize (GdkDrawContext *draw_context);
 
-#ifdef GDK_WIN32_ENABLE_EGL
+#ifdef HAVE_EGL
 EGLSurface gdk_win32_surface_get_egl_surface (GdkSurface *surface,
                                               EGLConfig   config,
                                               gboolean    is_dummy);

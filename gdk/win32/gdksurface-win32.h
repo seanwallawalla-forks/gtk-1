@@ -340,8 +340,6 @@ struct _GdkWin32Surface
   gboolean force_recompute_size;
 
 #ifdef HAVE_EGL
-  EGLSurface egl_surface;
-  EGLSurface egl_dummy_surface;
   guint egl_force_redraw_all : 1;
 #endif
 };

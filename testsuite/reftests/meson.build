@@ -505,6 +505,8 @@ testdata = [
   # it is not in xfail since it succeeds on some platforms
   #'window-show-contents-on-map.ref.ui',
   #'window-show-contents-on-map.ui',
+  'wrap-char.ref.ui',
+  'wrap-char.ui',
 ]
 
 # These need to be fixed but the issue hasn't been tracked down.

@@ -44,6 +44,14 @@ if os_win32
                         ])
 endif
 
+if macos_enabled
+  add_test_setup ('macos',
+                  env: common_env + [
+                        'GDK_BACKEND=macos',
+                        'TEST_OUTPUT_SUBDIR=macos',
+                        ])
+endif
+
 if broadway_enabled
   add_test_setup ('broadway',
                   env: common_env + [
